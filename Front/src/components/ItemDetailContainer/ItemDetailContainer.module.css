@@ -1,0 +1,49 @@
+.container {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        'title title title'
+        'pic descrip descrip'
+        'pic category rate'
+        'pic price cart';
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+    padding: 100px;
+    padding-top: 10px;
+}
+
+h1 {
+    grid-area: title;
+    padding: 20px
+}
+
+img {
+    grid-area: pic;
+}
+
+.description {
+    grid-area: descrip;
+    text-align: end;
+}
+
+.button {
+    grid-area: category;
+    justify-self: end;
+}
+
+.rating {
+    grid-area: rate;
+
+}
+
+.price {
+    grid-area: price;
+    justify-self: end;
+}
+
+.cart {
+    grid-area: cart;
+
+}

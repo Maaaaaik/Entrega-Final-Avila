@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: API de Productos
+  description: API para administrar productos
+  contact:
+    name: Mikel
+paths:
+  /products:
+    get:
+      summary: Obtener todos los productos
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Lista de productos obtenida exitosamente
+    post:
+      summary: Crear un nuevo producto
+      tags:
+        - Products
+      responses:
+        '201':
+          description: Producto creado exitosamente
+  /products/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Obtener un producto por ID
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Producto encontrado exitosamente
+        '404':
+          description: Producto no encontrado
+    put:
+      summary: Actualizar un producto por ID
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Producto actualizado exitosamente
+        '404':
+          description: Producto no encontrado
+    delete:
+      summary: Eliminar un producto por ID
+      tags:
+        - Products
+      responses:
+        '204':
+          description: Producto eliminado exitosamente
+        '404':
+          description: Producto no encontrado

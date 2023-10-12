@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: API de Carritos de Compras
+  description: API para gestionar carritos de compras
+  contact:
+    name: Tu Nombre
+paths:
+  /carts:
+    get:
+      summary: Obtener todos los carritos de compras
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Lista de carritos de compras obtenida exitosamente
+    post:
+      summary: Crear un nuevo carrito de compras
+      tags:
+        - Cart
+      responses:
+        '201':
+          description: Carrito de compras creado exitosamente
+  /carts/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Obtener un carrito de compras por ID
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Carrito de compras encontrado exitosamente
+        '404':
+          description: Carrito de compras no encontrado
+    put:
+      summary: Actualizar un carrito de compras por ID
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Carrito de compras actualizado exitosamente
+        '404':
+          description: Carrito de compras no encontrado
+    delete:
+      summary: Eliminar un carrito de compras por ID
+      tags:
+        - Cart
+      responses:
+        '204':
+          description: Carrito de compras eliminado exitosamente
+        '404':
+          description: Carrito de compras no encontrado
+/carts/{cartId}/add:
+    parameters:
+      - name: cartId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Agregar elementos al carrito de compras
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Elementos agregados al carrito de compras exitosamente
+        '404':
+          description: Carrito de compras no encontrado

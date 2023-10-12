@@ -1,0 +1,32 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.chekout {
+    display: flex;
+    margin: 100px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+}
+
+.container {
+    text-align: center;
+}
+
+.lista {
+    align-self: center;
+    width: 40%;
+}
+
+.cantidad {
+    margin-top: 0 !important;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem !important;
+    align-content: center;
+    justify-content: center;
+}

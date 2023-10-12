@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+
+nav {
+    height: 60px;
+    background-color: #26614f;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Product Sans Black', sans-serif;
+    color: #529f88;
+}
+
+h1 {
+    text-decoration: none;
+    color: #529f88;
+}

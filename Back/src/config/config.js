@@ -24,6 +24,7 @@ const config = {
     GHID: process.env.GITHUB_APP_ID,
     GHClientID: process.env.GITHUB_CLIEND_ID,
     callback: process.env.CALLBACK_URL,
+    backendURL: process.env.REACT_APP_BACKEND_URL,
     connectDB: async () => MongoSingleton.getInstance()
 }
 

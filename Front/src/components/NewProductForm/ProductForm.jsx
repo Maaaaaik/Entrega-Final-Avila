@@ -44,7 +44,7 @@ function NewProductForm() {
             price: parseFloat(formData.price), // Convierte a número de punto flotante
         };
 
-        fetch("http://localhost:8080/api/products", {
+        fetch(`${config.backendURL}/api/products`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -47,14 +47,14 @@ const LoginForm = (props) => {
 
     const handleGitHubLogin = () => {
         // Redirigir al servidor de autenticación de GitHub
-        window.location.href = 'http://localhost:8080/api/users/github/';
+        window.location.href = `${config.backendURL}/api/users/github/`;
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8080/api/users/login', {
+            const response = await fetch(`${config.backendURL}/api/users/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

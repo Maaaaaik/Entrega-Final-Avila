@@ -39,7 +39,7 @@ const swaggerOptions = {
 logger.info(__dirname)
 const specs = swaggerJSDoc(swaggerOptions)
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:8080'];
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:8080', `${config.backendURL}`];
 
 server.use(cors({
     origin: function (origin, callback) {

@@ -6,7 +6,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Navbar from './components/Navbar/Navbar.jsx'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Cart from './components/Cart/Cart'
-import NewProductForm from './components/NeWProductForm/ProductForm'
+import NewProductForm from './components/NewProductForm/ProductForm'
 import Login from './components/login/Login'
 import CategoryListContainer from './components/CategoryListContainer/CategoryListContainer'
 

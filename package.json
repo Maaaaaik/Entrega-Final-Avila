@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm install concurrently",
-    "dev": "concurrently \"cd Front && npm run dev\" \"cd Back && npm run start\""
+    "dev": "concurrently \"cd Front && npm run build\" \"cd Back && npm run start\""
   },
   "keywords": [],
   "author": "",

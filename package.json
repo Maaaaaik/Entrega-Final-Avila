@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm install -g concurrently",
     "dev": "concurrently \"cd Front && npm run dev\" \"cd Back && npm run dev\""
   },
   "keywords": [],

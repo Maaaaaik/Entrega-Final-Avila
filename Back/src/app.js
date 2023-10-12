@@ -1,6 +1,6 @@
 import express from 'express';
 import expressSession from 'express-session'
-import router from './routes/index.js';
+import router from './Routes/index.js';
 import not_found_handler from './middlewares/not_found.js';
 import { __dirname } from './utils.js';
 import manager from './managers/Product.js';

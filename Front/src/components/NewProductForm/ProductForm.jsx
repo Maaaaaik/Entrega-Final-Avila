@@ -44,7 +44,7 @@ function NewProductForm() {
             price: parseFloat(formData.price), // Convierte a número de punto flotante
         };
 
-        fetch(`${config.backendURL}/api/products`, {
+        fetch("https://malakit.onrender.com/api/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

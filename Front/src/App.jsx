@@ -9,7 +9,7 @@ import Cart from './components/Cart/Cart'
 import NewProductForm from './components/NewProductForm/ProductForm'
 import Login from './components/login/Login'
 import CategoryListContainer from './components/CategoryListContainer/CategoryListContainer'
-import { config } from '../../Back/src/config/config'
+
 
 function App() {
 
@@ -52,7 +52,7 @@ function App() {
     }
   };
   const navigateToPage = (page) => {
-    fetch(`${config.backendURL}/api/products?page=${page}`)
+    fetch(`https://malakit.onrender.com/api/products?page=${page}`)
       .then((response) => response.json())
       .then((data) => {
         setProductos(data.products.docs);
@@ -65,7 +65,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch(`${config.backendURL}/api/products`)
+    fetch('https://malakit.onrender.com/api/products')
       .then((response) => response.json())
       .then((data) => {
         setPages(data.products)

@@ -47,14 +47,14 @@ const LoginForm = (props) => {
 
     const handleGitHubLogin = () => {
         // Redirigir al servidor de autenticación de GitHub
-        window.location.href = `${config.backendURL}/api/users/github/`;
+        window.location.href = 'https://malakit.onrender.com/api/users/github/';
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await fetch(`${config.backendURL}/api/users/login`, {
+            const response = await fetch('https://malakit.onrender.com/api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

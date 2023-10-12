@@ -13,7 +13,7 @@ export default function BasicSelect() {
 
     useEffect(() => {
 
-        fetch('http://localhost:8080/api/products?limit=9999')
+        fetch('https://malakit.onrender.com/api/products?limit=9999')
             .then((response) => response.json())
             .then((data) => {
 

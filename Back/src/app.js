@@ -39,7 +39,7 @@ const swaggerOptions = {
 logger.info(__dirname)
 const specs = swaggerJSDoc(swaggerOptions)
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:8080', 'https://malakit.onrender.com', 'http://localhost:4173', 'https://stalwart-bavarois-867516.netlify.app/'];
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:8080', 'https://malakit.onrender.com', 'http://localhost:4173', 'https://stalwart-bavarois-867516.netlify.app'];
 
 server.use(cors({
     origin: function (origin, callback) {

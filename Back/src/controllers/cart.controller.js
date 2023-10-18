@@ -18,10 +18,10 @@ class CartController {
     }
     getCart = async (req, res, next) => {
         try {
-            let id = req.params.pid
-            let one = await this.cartService.getCart(id)
+            let cid = req.params.cid
+            let one = await this.cartService.getCart(cid)
             if (one) {
-                return res.json({ status: 200, one })
+                return res.json({ status: 200, one: one })
             }
             let message = 'not found'
             return res.json({ status: 404, message })
@@ -42,7 +42,7 @@ class CartController {
     }
     updateCart = async (req, res, next) => {
         try {
-            let id = req.params.pid
+            let id = req.params.cid
             let data = req.body
             let response = await this.cartService.updateCart(id, data)
             if (response) {
@@ -59,7 +59,7 @@ class CartController {
             let cartId = req.params.cid;
             let productId = Number(req.params.pid);
 
-            let cart = this.cartService.Cart.findById(cartId);
+            let cart = await this.cartService.Cart.findById(cartId);
             if (!cart) {
                 return res.json({ status: 404, message: 'Cart not found' });
             }
@@ -70,7 +70,7 @@ class CartController {
             } else {
                 cart.products.push({ product: productId, quantity: 1 });
             }
-            await this.cartService.findByIdAndUpdate(cartId, cart);
+            await this.cartService.Cart.findByIdAndUpdate(cartId, cart);
 
             return res.json({ status: 200, message: 'Product added to cart' });
         } catch (error) {
@@ -80,7 +80,7 @@ class CartController {
 
     deleteCart = async (req, res, next) => {
         try {
-            let id = req.params.pid
+            let id = req.params.cid
             let response = await this.cartService.deleteCart(id)
             if (response) {
                 return res.json({ status: 200, message: 'cart deleted' })

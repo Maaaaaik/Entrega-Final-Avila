@@ -68,6 +68,7 @@ const LoginForm = (props) => {
                 setIsLoggedIn(true)
                 setOpen(true)
                 localStorage.setItem('jwtToken', data.token);
+
             } else {
                 console.error('Error en el inicio de sesion');
             }

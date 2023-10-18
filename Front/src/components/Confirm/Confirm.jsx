@@ -4,11 +4,6 @@ import Typography from '@mui/material/Typography';
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 
-
-
-
-
-
 function Confirm() {
     return (
 
@@ -37,6 +32,15 @@ function Confirm() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <TextField
+                        id="Documento"
+                        name="Documento"
+                        label="Documento"
+                        fullWidth
+                        autoComplete="Documento"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <TextField
                         id="Email"
                         name="Email"
                         label="Email"
@@ -44,13 +48,58 @@ function Confirm() {
                         autoComplete="Email"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12}>
                     <TextField
-                        id="Repetir Email"
-                        name="Repetir Email"
-                        label="Repetir Email"
+                        id="Direccion de entrega"
+                        name="Direccion de entrega"
+                        label="Direccion de entrega"
                         fullWidth
-                        autoComplete="Repetir Email"
+                        autoComplete="Direccion de entrega"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <TextField
+                        id="Numero"
+                        name="Numero"
+                        label="Numero"
+                        fullWidth
+                        autoComplete="Numero"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <TextField
+                        id="Dpto"
+                        name="Dpto"
+                        label="Dpto"
+                        fullWidth
+                        autoComplete="Dpto"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={12}>
+                    <TextField
+                        id="Numero de tarjeta"
+                        name="Numero de tarjeta"
+                        label="Numero de tarjeta"
+                        fullWidth
+                        autoComplete="Numero de tarjeta"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <TextField
+                        id="Vencimiento"
+                        name="Vencimiento"
+                        label="Vencimiento"
+                        fullWidth
+                        autoComplete="Vencimiento"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <TextField
+                        id="CVC*"
+                        name="CVC*"
+                        label="CVC*"
+                        fullWidth
+                        autoComplete="CVC*"
                     />
                 </Grid>
                 <Button onClick={() => alert("Compra realizada con exito")} sx={{ m: 2, mt: 3 }} variant='contained' >

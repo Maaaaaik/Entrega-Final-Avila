@@ -12,7 +12,6 @@ import CategoryListContainer from './components/CategoryListContainer/CategoryLi
 
 
 function App() {
-
   const [cartItems, setCartItems] = useState([]);
   const [productos, setProductos] = useState([]);
   const [pages, setPages] = useState([])
